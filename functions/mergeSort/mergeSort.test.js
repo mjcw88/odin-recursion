@@ -28,6 +28,9 @@ describe("mergeSort", () => {
     test("array with floats included", () => {
         expect(mergeSort([4.5, 7.1, 2, 6, 0.2, 3.7, 5, 1])).toEqual([0.2, 1, 2, 3.7, 4.5, 5, 6, 7.1]);
     });
+    test("array with negative numbers", () => {
+        expect(mergeSort([6, -3, 4, 1, -5, 2, -7, 0])).toEqual([-7, -5, -3, 0, 1, 2, 4, 6]);
+    });
     test("doesn't accept strings", () => {
         expect(mergeSort("Hello, world!")).toBe(undefined);
     });

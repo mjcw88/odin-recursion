@@ -13,6 +13,7 @@ export function mergeSort(array) {
                 j += 1;
             }
         }
+        sortedArray.push(...left.slice(i), ...right.slice(j));
         return sortedArray;
     }
 
@@ -29,5 +30,3 @@ export function mergeSort(array) {
 
     return merge(sortedLeft, sortedRight);
 }
-
-mergeSort([6, 3, 4, 1, 5, 2, 7, 0]);

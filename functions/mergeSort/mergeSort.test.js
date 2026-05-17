@@ -43,4 +43,7 @@ describe("mergeSort", () => {
     test("doesn't accept arrays with non-numbers inside it", () => {
         expect(mergeSort(["0", "1", "2", "3", 4, 5, 6, 7])).toBe(undefined);
     });
+    test("doesn't accept an empty array", () => {
+        expect(mergeSort([])).toBe(undefined);
+    });
 });

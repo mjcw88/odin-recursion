@@ -18,7 +18,7 @@ export function mergeSort(array) {
     }
 
     if (!Array.isArray(array)) return; // Checks if input is an array
-    if (array.some((x) => typeof x !== "number")) return; // Checks if all values inside array are valid
+    if (array.some((x) => typeof x !== "number") || array.length === 0) return; // Checks if all values inside array are valid
     if (array.length === 1) return array;
 
     const middle = Math.ceil(array.length / 2);
